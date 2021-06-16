@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  color:white;
+  background-color:#192A54;
+}
+.menuContainer{
+  display: flex;
+  flex-wrap: wrap;
+  padding:20px;
+  background-color: #192A54;
+}
+.menuLink{
+  text-align:center;
+  width: 30%;
+  color: white;
+  padding: 15px 20px;
+}
+.menuLink:hover{
+  background-color: white;
+  color:#192A54;
+}
+@media screen and (max-width:768px){
+  .menuContainer{
+    width: 100%;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .menuLink{
+    width: 90%;
+    padding: 25px 0;
+  }
+}
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
