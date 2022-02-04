@@ -7,11 +7,12 @@
     <title>JavaScript Fundamentals – Part 2</title>
     <style>
       body {
-        height: 100vh;
         display: flex;
         align-items: center;
         background: linear-gradient(to top left, #28b487, #7dd56f);
+        flex-direction: column;
       }
+
       h1 {
         font-family: sans-serif;
         font-size: 50px;
@@ -21,29 +22,347 @@
         text-align: center;
         color: white;
       }
-      p{
+
+      h3 {
         font-family: sans-serif;
         color: white;
         font-size: 30px;
         text-align: center;
       }
-      div{
+
+      .explanation {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: space-around;
+      }
+
+      p {
+        font-family: sans-serif;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+        width: 600px;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      div {
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        padding: 15px 0 0 25px ;
+        padding: 15px 0 0 25px;
+      }
 
+      .exercises {
+        width: 1050px;
+        font-family: sans-serif;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px white solid;
+      }
+
+      .thHead {
+        font-weight: 600;
+        text-align: center;
+        font-size: 20px;
+        border: 1px white solid;
+        padding: 10px;
+      }
+
+      .thBody {
+        font-weight: 500;
+        padding: 15px 5px 10px 15px;
+        border: 1px white solid;
       }
     </style>
   </head>
+
   <body>
     <div>
-      <a href="/">
-        <img src="../img/left-arrow.svg" alt="Home" width="50px" height="50px">
+      <a href="../index.html">
+        <img
+          src="../img/left-arrow.svg"
+          alt="Home"
+          width="50px"
+          height="50px"
+        />
       </a>
     </div>
     <h1>JavaScript Fundamentals – Part 2</h1>
-    <p></p>
+    <table class="exercises">
+      <thead>
+        <tr>
+          <th class="thHead" width="300px">Lecture</th>
+          <th class="thHead" width="600px">Instructions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--Exercise 1: Functions-->
+        <tr>
+          <th class="thBody" width="300px">1. Functions</th>
+          <th class="thBody" width="600px">
+            1. Write a funtion called
+            <i>'describeCountry'</i>
+            which takes three parameters:<br />
+            <i>'country'</i>,
+            <i>'population'</i>
+            and
+            <i>'capitalCity'</i>. Based on this input, the function returns a
+            string with this format:
+            <i
+              >'Finland has 6 million people and its capital city is
+              Helsinki'</i
+            >
+            2.Call this function 3 times, with input data for 3 different
+            countries. Store the returned values in 3 different variables, and
+            log them to the console.
+          </th>
+        </tr>
+
+        <!--Exercise 2: Function Declarations VS Expressions-->
+        <tr>
+          <th class="thBody" width="300px">
+            2. Function Declarations VS Expressions
+          </th>
+          <th class="thBody" width="600px">
+            1. The world population in 7900 million people. Create a
+            <b>function declaration</b>
+            called
+            <i>'percentageOfWorld1'</i>
+            which receives a
+            <i>'population'</i>
+            value, and returns the percentage of the world population that the
+            given population represents. For example, China has 1441 million
+            people, so it's about 18.2% of the world population.<br />
+            2. To calculate the percentage, divide the given
+            <i>'population'</i>
+            value by 7900 and then multiply by 100.<br />
+            3. Call
+            <i>'percentageOfWorld1'</i>
+            for 3 populations of countries of your choice, store the results
+            into variables, and log them to the console.<br />
+            4. Create a
+            <b>function expression</b>
+            which does the exact same thing, called
+            <i>'percentageOfWorld2'</i>, and also call it with 3 country
+            populations (can be the same populations).
+          </th>
+        </tr>
+
+        <!--Exercise 3: Arrow Functions-->
+        <tr>
+          <th class="thBody" width="300px">3. Arrow Functions</th>
+          <th class="thBody" width="600px">
+            1.Recreate the last assignment, but this time create an
+            <b>arrow function</b>
+            called
+            <i>'percentageOfWorld3'</i>
+          </th>
+        </tr>
+
+        <!--Exercise 4: Functions Calling Other Functions-->
+        <tr>
+          <th class="thBody" width="300px">
+            4. Functions Calling Other Functions
+          </th>
+          <th class="thBody" width="600px">
+            1. Create a function called
+            <i>'describePopulation'</i>. Use the function type you like the
+            most. This function takes in two arguments:
+            <i>'country'</i>
+            and
+            <i>'population'</i>, and returns a string like this:
+            <i>
+              'China has 1441 million people', which is about 18.2% of the
+              world. </i
+            ><br />
+            2. To calculate the percentage,
+            <i>'describePopulation'</i>
+            call the
+            <i>'percentageOfWorld1'</i>
+            you created earlier.<br />
+            3. Call 'describePopulation' with data for 3 countries of your
+            choice
+          </th>
+        </tr>
+
+        <!--Exercise 5: Introduction to Arrays-->
+        <tr>
+          <th class="thBody" width="300px">5. Introduction to Arrays</th>
+          <th class="thBody" width="600px">
+            1. Create an array containing 4 population values of 4 countries of
+            your choice. You may use the values you have been using previously.
+            Store this array into a variable called
+            <i>'neighbours'</i><br />
+            2. Log to the console whether the array has 4 elements or not (true
+            or false).<br />
+            3.Create an array called for these 4 population values. Use the
+            function
+            <i>percentageOfWorld1</i>
+            that you created earlier to compute the 4 percentage values.
+          </th>
+        </tr>
+
+        <!--Exercise 6: Basic Array Operations (Methods)-->
+        <tr>
+          <th class="thBody" width="300px">
+            6: Basic Array Operations (Methods)
+          </th>
+          <th class="thBody" width="600px">
+            1. Create an array containing all the neighbours countriesof a
+            country of your choice. Choose a country which has at least 2 or 3
+            neighbours. Store the array into a variable called
+            <i>'neighbours'</i>
+            <br />
+            2. At some point, a new country called
+            <i>'Utopia'</i>
+            is created in the neighbourhood of your selected country. So remove
+            it from the end of the
+            <i>'neighbours'</i>
+            array.<br />
+            3. Unfortunately, after some time, the new country is dissolved. So
+            remove it from the end of the array.<br />
+            4. If the
+            <i>'neighbours'</i>
+            array does not include the country
+            <i>'Germany'</i>, log to the console:
+            <i>'Probably not a central European country :D'</i>.<br />
+            5. Change the name of one of your neighbouring countries. To do
+            that, find the index of the country in the
+            <i>'neighbours'</i>
+            array, and then use that index to change the array at that index
+            position. For example, you can search for
+            <i>'Sweden'</i>
+            in the array, and then replace it with
+            <i>'Republic of Sweden'</i>.
+          </th>
+        </tr>
+
+        <!--Exercise 7: Introduction to Objects-->
+        <tr>
+          <th class="thBody" width="300px">7: Introduction to Objects</th>
+          <th class="thBody" width="600px">
+            1. Create an object called
+            <i>'myCountry'</i>
+            for a country of your choice, containing properties
+            <i>'country'</i>, <i>'capital'</i>, <i>'language'</i>,
+            <i>'population'</i>
+            and
+            <i>'neighbours'</i>
+            (an array like we used in previous assignments).
+          </th>
+        </tr>
+
+        <!--Exercise 8: Dot VS Bracket Notation-->
+        <tr>
+          <th class="thBody" width="300px">8: Dot VS Bracket Notation</th>
+          <th class="thBody" width="600px">
+            1. Using the object from the previous assignment, log a string like
+            this to the console:
+            <i
+              >'Finland has 6 million finnish-speaking people, 3 neighbouring
+              countries and a capital called Helsinki'</i
+            >.
+            <br />
+            2. Increase the country's population by two million using
+            <b>dot notation</b>, and then decrease it by two million using
+            <b>brackets notation</b>.
+          </th>
+        </tr>
+
+        <!--Exercise 9: Object Methods-->
+        <tr>
+          <th class="thBody" width="300px">9: Object Methods</th>
+          <th class="thBody" width="600px">
+            1. Add a method called <i>'describe'</i> to the
+            <i>'myCountry'</i> object. This method will log a string to the
+            console, similar to the string logged in the previous assignment,
+            but this time using the <i>'this'</i> keyword.
+            <br />
+            2. Call the <i>'describe'</i> method.
+            <br />
+            3. Add a method called <i>'checkIsland'</i> to the
+            <i>'myCountry'</i> object. This method will set a new property on
+            the object, called <i>'isIsland'</i>. <i>'isIsland'</i> will be true
+            if there are no neighbouring countries, and false if there are. Use
+            the ternary operator to set the property.
+          </th>
+        </tr>
+
+        <!--Exercise 10: Iteration: The for Loop-->
+        <tr>
+          <th class="thBody" width="300px">10: Iteration: The for Loop</th>
+          <th class="thBody" width="600px">
+            1. There are elections in your country! In a small town, there are
+            only 50 voters. Use a for loop to simulate the 50 people voting, by
+            logging a string like this to the console (for numbers 1 to 50):
+            <i>'Voter number 1 is currently voting'</i>.
+          </th>
+        </tr>
+
+        <!--Exercise 11: Looping Arrays, Breaking and Continuing-->
+        <tr>
+          <th class="thBody" width="300px">
+            11: Looping Arrays, Breaking and Continuing
+          </th>
+          <th class="thBody" width="600px">
+            1. Lets bring back the <i>'populations'</i> array from a previous
+            assignment.
+            <br />
+            2. Use a for loop to compute an array called
+            <i>'percentages2'</i> containing the percentages of the world
+            population for the 4 population values. Use the function
+            <i>'percentageOfWorld1'</i> that you created earlier.
+            <br />
+            3. Confirm that <i>'percentages2'</i> contains exactly the same
+            values as the <i>'percentages'</i> array that we created manually in
+            the previous assignment, and reflect on how much better this
+            solution is.
+          </th>
+        </tr>
+
+        <!--Exercise 12: Looping Backwards and Loops in Loops-->
+        <tr>
+          <th class="thBody" width="300px">
+            12: Looping Backwards and Loops in Loops
+          </th>
+          <th class="thBody" width="600px">
+            1. Store this array of arrays into a variable called
+            <i
+              >'listOfNeighbours' [['Canada', Mexico], [Spain], ['Norway',
+              'Sweden', 'Russia']];</i
+            >
+            <br />
+            2. Log <b>only</b> the neighbouring countries to the console, one by
+            one, <b>not</b> the entire arrays. Log a string like
+            <i>'Neighbour: Canada'</i> for each country.
+            <br />
+            3. You will need a loop inside a loop for this. This is actually a
+            bit tricky, so don't worry if it's too difficult for you! But you
+            can still try to figure this out anyway.
+          </th>
+        </tr>
+
+        <!--Exercise 13: The while Loop-->
+        <tr>
+          <th class="thBody" width="300px">13: The while Loop</th>
+          <th class="thBody" width="600px">
+            1. Recreate the challenge from the lecture
+            <i>'Looping Arrays, Breaking and Continuing'</i>, but this time
+            using a while loop (call the array <i>'percentages3'</i>)
+            <br />
+            2. Reflect on what solution you like better for this task: the for
+            loop or the while loop?
+          </th>
+        </tr>
+      </tbody>
+    </table>
     <script src="../js/02-fundamentals.js"></script>
   </body>
 </html>
